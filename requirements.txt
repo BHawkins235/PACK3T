@@ -1,0 +1,11 @@
+scapy>=2.7.0
+requests>=2.31.0
+json>=2.0.0
+argparse>=1.4.0
+typing>=3.10.0
+sqlite3>=3.36.0
+datetime>=4.0.0
+traceback>=0.1.0
+tempfile>=0.2.0
+os>=0.1.0
+subprocess>=1.0.0
