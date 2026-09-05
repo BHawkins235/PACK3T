@@ -104,7 +104,7 @@ def analyze_packets(packets: List, model: str = "llama3.2") -> str:
     packet_text = packet_to_text(packets)
     
     prompt = f"""You are a network traffic analyst. Analyze these captured network packets and provide a summary.
-Explain what type of traffic this is, notable patterns, and any important observations in technical language . List out the key Statistics on bullet points of the traffic, such as protocols used, source/destination IPs, ports, and any anomalies you notice.
+Explain what type of traffic this is, notable patterns, and any important observations in technical language . List out the key Statistics in levels of severarity of the traffic (Critical, High, Medium, Low,), also use details from the packets such as protocols used, source/destination IPs, ports, and any anomalies you notice.
 
 Packets:
 {packet_text}
@@ -134,7 +134,7 @@ def detect_anomalies(packets: List, model: str = "llama3.2") -> str:
     """Look for suspicious patterns in packets."""
     packet_text = packet_to_text(packets)
     
-    prompt = f"""You are a cybersecurity analyst. Review these packets for potential security concerns.
+    prompt = f"""You are a cybersecurity analyst. Review these packets for potential security concerns, and scale them from critical to low risk. Provide a summary of any anomalies or suspicious activity you detect.
 
 Look for:
 - Unusual ports or protocols
