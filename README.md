@@ -211,7 +211,6 @@ python PACK3T.py clear
 
 ## Things to add to this project
 
-  - redo the prompt to assess network conditions and activit in severity levels (High, Medium, low)
   - add a command to export the report into a file after running 
 
 ## Notes
